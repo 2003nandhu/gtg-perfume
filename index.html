@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GTG Perfumes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <h2>GTG</h2>
+      </div>
+
+      <!-- Navigation -->
+      <nav id="mainNav" aria-label="Main Navigation">
+
+        <ul>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Fragrances</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="header-actions">
+        <button type="button">Sign In</button>
+        <button type="button">Cart</button>
+
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation">
+  ☰
+</button>
+
+
+    </div>
+  </header>
+  <!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-container">
+
+    <!-- Left Content -->
+    <div class="hero-text">
+      <h1>Live your best life.</h1>
+      <p>10x stronger · 9 ingredients · 20k+ happy customers</p>
+      <button type="button">Shop Now</button>
+    </div>
+
+    <!-- Right Image Placeholder -->
+    <div class="hero-image">
+  <img src="assets/images/hero.jpg" alt="GTG luxury perfume bottle" width="400" height="300">
+</div>
+
+
+
+  </div>
+</section>
+
+<!-- PRODUCT SECTION -->
+<section class="product">
+  <div class="product-container">
+
+    <!-- Left: Gallery -->
+   <div class="product-gallery">
+
+  <div class="main-image">
+    <img id="mainProductImage" src="assets/images/p1.jpg" alt="Product" width="400" height="400">
+  </div>
+
+  <div class="gallery-controls">
+  <button type="button" id="prevBtn">←</button>
+  <button type="button" id="nextBtn">→</button>
+</div>
+
+<div class="gallery-dots" id="galleryDots"></div>
+
+
+  <div class="thumbnails">
+  <img src="assets/images/p1.jpg" alt="GTG perfume bottle1">
+  <img src="assets/images/p2.jpg" alt="GTG perfume bottle2">
+  <img src="assets/images/p3.jpg" alt="GTG perfume bottle3">
+</div>
+
+
+</div>
+
+
+    <!-- Right: Product Info -->
+    <div class="product-info">
+      <h2>GTG Perfumes</h2>
+      <p>Choose your fragrance and purchase type.</p>
+
+      <div class="options">
+  <h4>Fragrances</h4>
+  <div class="radio-group" id="fragranceGroup">
+  <label class="radio-btn">
+    <input type="radio" name="fragrance" value="fresh" data-price="799" checked>
+    <span>Fresh</span>
+  </label>
+
+  <label class="radio-btn">
+    <input type="radio" name="fragrance" value="bold" data-price="899">
+    <span>Bold</span>
+  </label>
+
+  <label class="radio-btn">
+    <input type="radio" name="fragrance" value="classic" data-price="999">
+    <span>Classic</span>
+  </label>
+</div>
+
+</div>
+
+<div class="options">
+  <h4>Purchase Type</h4>
+  <div class="radio-group" id="purchaseGroup">
+  <label class="radio-btn">
+    <input type="radio" name="purchase" value="single" data-multiplier="1" checked>
+    <span>Single</span>
+  </label>
+
+  <label class="radio-btn">
+    <input type="radio" name="purchase" value="double" data-multiplier="2">
+    <span>Double</span>
+  </label>
+
+  <label class="radio-btn">
+    <input type="radio" name="purchase" value="gift" data-multiplier="1.5">
+    <span>Gift</span>
+  </label>
+</div>
+
+</div>
+<div class="subscriptions">
+
+  <div class="subscription" id="singleSubscription">
+    <h4>Single Subscription</h4>
+    <div class="subscription-content">
+      <p>Delivered every month. Cancel anytime.</p>
+      <ul>
+        <li>1 perfume bottle</li>
+        <li>Free shipping</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subscription" id="doubleSubscription">
+    <h4>Double Subscription</h4>
+    <div class="subscription-content">
+      <p>Best value plan.</p>
+      <ul>
+        <li>2 perfume bottles</li>
+        <li>Priority shipping</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+<p class="price">Price: ₹<span id="price">799</span></p>
+
+<div class="qty">
+  <button type="button" id="minus">-</button>
+  <span id="quantity">1</span>
+  <button type="button" id="plus">+</button>
+</div>
+<a class="add-to-cart" id="addToCart" role="button">Add to Cart</a>
+  </div>
+</section>
+
+<section class="stats" id="statsSection">
+  <div class="stats-container">
+
+    <div class="stat">
+      <h3><span class="count" data-target="84">0</span>%</h3>
+      <p>Long-lasting fragrance</p>
+    </div>
+
+    <div class="stat">
+      <h3><span class="count" data-target="78">0</span>%</h3>
+      <p>Customer satisfaction</p>
+    </div>
+
+    <div class="stat">
+      <h3><span class="count" data-target="92">0</span>%</h3>
+      <p>Repeat buyers</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="comparison">
+  <div class="comparison-container">
+
+    <h2>Why Choose GTG?</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Feature</th>
+          <th scope="col">GTG</th>
+          <th scope="col">Others</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Fragrance Strength</th>
+          <td>10x Stronger</td>
+          <td>Standard</td>
+        </tr>
+        <tr>
+          <th scope="row">Ingredients</th>
+          <td>Natural</td>
+          <td>Synthetic</td>
+        </tr>
+        <tr>
+          <th scope="row">Longevity</th>
+          <td>24 Hours</td>
+          <td>6–8 Hours</td>
+        </tr>
+        <tr>
+          <th scope="row">Shipping</th>
+          <td>Free</td>
+          <td>Paid</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+
+  <script src="js/script.js" defer></script>
+
+
+</main>
+
+</body>
+</html>

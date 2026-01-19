@@ -1,0 +1,460 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h2 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: green;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.header-actions button {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.header-actions button:hover {
+  background: #f3f3f3;
+}
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #eee;
+
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+  }
+
+  nav.open {
+    transform: translateY(0);
+  }
+
+
+  nav ul {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+.hero {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  padding: 12px 24px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background: darkgreen;
+}
+
+.hero-image {
+  width: 400px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-image {
+    width: 90%;
+  }
+}
+
+/* PRODUCT SECTION */
+.product {
+  width: 100%;
+  padding: 80px 20px;
+  background: #fafafa;
+}
+
+.product-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* LEFT: GALLERY */
+.product-gallery {
+  width: 50%;
+}
+
+.main-image {
+  width: 100%;
+  height: 400px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.gallery-controls button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.gallery-dots {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-dots span {
+  font-size: 20px;
+  margin: 0 4px;
+  color: #bbb;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+}
+.thumbnails img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnails img:hover {
+  border: 2px solid green;
+}
+
+
+/* RIGHT: INFO */
+.product-info {
+  width: 50%;
+}
+
+.product-info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.options h4 {
+  margin-bottom: 6px;
+}
+
+.add-to-cart {
+  display: inline-block;
+  padding: 14px 28px;
+  background: green;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.add-to-cart:hover {
+  background: darkgreen;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product-gallery,
+  .product-info {
+    width: 100%;
+  }
+
+  .main-image {
+    height: 280px;
+  }
+}
+.dot {
+  cursor: pointer;
+}
+
+.dot.active {
+  color: green;
+}
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-group button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.btn-group button.active {
+  background: green;
+  color: white;
+  border-color: green;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.qty button {
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Sticky header */
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-btn {
+  position: relative;
+}
+
+.radio-btn input {
+  display: none;
+}
+
+.radio-btn span {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: white;
+}
+
+.radio-btn input:checked + span {
+  background: green;
+  color: white;
+  border-color: green;
+}
+.subscriptions {
+  margin-bottom: 20px;
+}
+
+.subscription {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.subscription h4 {
+  margin-bottom: 6px;
+}
+
+.subscription-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.subscription.active .subscription-content {
+  max-height: 200px;
+}
+.thumbnails img.active {
+  border: 2px solid green;
+}
+.stats {
+  padding: 80px 20px;
+  background: white;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 40px;
+  margin-bottom: 8px;
+  color: green;
+}
+
+.stat p {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.comparison {
+  padding: 80px 20px;
+  background: #fafafa;
+}
+
+.comparison-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.comparison h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: #eee;
+  padding: 12px;
+  text-align: left;
+}
+
+tbody th,
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid green;
+  outline-offset: 2px;
+}
